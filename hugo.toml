@@ -1,0 +1,67 @@
+baseURL = "https://mpautomazione.github.io"
+defaultContentLanguage = "it"
+languageCode = "it"
+
+title = "Movimento per la Piena Automazione"
+
+theme = "gokarna"
+
+# Automatically generate robots.txt
+enableRobotsTXT = true
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "Chi Siamo"
+    url = "/about"
+    pre = "<span data-feather='users'></span>"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "programma"
+    pre = "<span data-feather='file'></span>"
+    name = "Programma"
+    url = "/programma"
+    weight = 2
+
+[params]
+  minititle = "MPA"
+
+  # URL for the avatar on homepage
+  avatarURL = "assets/img/profile-img.png"
+  
+  # Choose one of size-xs, size-s, size-m, size-l & size-xl. (Default: size-m)
+  avatarSize = "size-xl"
+
+  # Description to display on homepage
+  description = "Il Futuro che non lascia indietro nessuno"
+
+  # Accent color is displayed when you hover over <a> tags
+  accentColor = "#FF4D4D" # Dark hover color
+  lightAccentColor = "#08F" # Light hover color
+
+  # Display "back to top" button on posts
+  ShowBackToTopButton = true
+
+  # You can use this to inject any HTML in the <head> tag.
+  # Ideal usecase for this is to import custom js/css or add your analytics snippet
+  customHeadHTML = ""
+
+  # Keywords relevant for SEO
+  
+  metaKeywords = ["movimento", "piena", "automazione","robot", "politica", "progressista", "partito", "socialista", "socialdemocratico", "pci", "psi", "reddito", "universale", "cittadinanza", "m5s", "pd"]
+
+  # If you want to display posts on the homepage, the options are
+  # "popular" (order posts by weight), "recent" (order posts by date)
+  # or "" (do not display, default option)
+  #  showPostsOnHomePage = ""
+
+  # Footer text
+  footer = ""
+
+  dateFormat = "2 Jan"
+  
+  descriptionText = ["Il Futuro che non lascia indietro nessuno", "Leggi il Programma e unisciti a Noi!"]
+  
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files

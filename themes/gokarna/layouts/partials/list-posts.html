@@ -1,0 +1,13 @@
+<div class="post-title">
+    <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a>
+    <div class="flex-break"></div>
+    {{ if hasPrefix .RelPermalink "/presentations/" }}
+    <span class="post-date"><a href={{ .Params.Slides }} target="_blank">[ slides ]</a></span>
+    &nbsp;&nbsp;&nbsp;
+    {{ else }}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {{ end }}
+    <span class="post-date"> [ {{ .Params.Language }} ] </span>
+    &nbsp;&nbsp;&nbsp;
+    <span class="post-date">{{ dateFormat (or .Site.Params.dateFormat "January 2, 2006") .Date}}</span>
+</div>

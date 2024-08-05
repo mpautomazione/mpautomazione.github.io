@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{- $avatarImgSrc := .Site.Params.AvatarURL -}}
+    {{- if and (isset site.Params "avatarURL") (not (hasPrefix $avatarImgSrc "http")) -}}
+        {{- $avatarImgSrc = (urls.JoinPath $.Site.BaseURL ($.Site.Params.AvatarURL | default "")) -}}
+    {{- end -}}
+    {{- .Scratch.Set "avatarImgSrc" $avatarImgSrc -}}
+
+    {{- partial "head.html" . -}}
+    <body>
+        <script>
+            // Immediately set theme on page load
+            setThemeByUserPref();
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        {{- partial "header.html" . -}}
+        <main id="content">
+        {{- block "main" . }}{{- end }}
+        </main>
+        {{- partial "footer.html" . -}}
+    </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var options = {
+            strings: {{ .Site.Params.descriptionText }},
+            typeSpeed: 50,
+            backSpeed: 20,
+            loop: true
+        };
+
+        var typed = new Typed("#typed-text", options);
+    });
+</script>
+</html>

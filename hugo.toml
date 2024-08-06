@@ -30,6 +30,8 @@ enableRobotsTXT = false
   # URL for the avatar on homepage
   avatarURL = "assets/img/profile-img.png"
   
+  miniAvatarURL = "android-chrome-512x512.png"
+  
   # Choose one of size-xs, size-s, size-m, size-l & size-xl. (Default: size-m)
   avatarSize = "size-xl"
 

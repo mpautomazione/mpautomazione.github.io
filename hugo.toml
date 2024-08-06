@@ -7,7 +7,7 @@ title = "Movimento per la Piena Automazione"
 theme = "gokarna"
 
 # Automatically generate robots.txt
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 [menu]
   [[menu.main]]
